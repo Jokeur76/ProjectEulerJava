@@ -11,15 +11,11 @@ public class Main {
 		{
 			fib1 += fib2;
 			if(fib1%2 == 0)
-			{
-				sum += fib1;
-			}
+				sum += fib1;System.out.println(fib1);
 			fib2 += fib1;
-			if(fib2%2 == 0)
-			{
-				sum += fib2;
-			}
-			if(fib2 >= 4000000)
+			if(fib1%2 == 0)
+				sum += fib2;System.out.println(fib2);
+			if(fib2 >= 34)
 				test = false;
 		}
 		System.out.println(sum);
