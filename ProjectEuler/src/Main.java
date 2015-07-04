@@ -1,28 +1,28 @@
 
-public class Main {
-
-
-	public static void main(String[] args) {
-		int fib1 = 1;
-		int fib2 = 2;
-		int sum = fib2;
-		boolean test = true;
-		while(test)
-		{
-			fib1 += fib2;
-			if(fib1%2 == 0)
-			{
-				sum += fib1;
-			}
-			fib2 += fib1;
-			if(fib2%2 == 0)
-			{
-				sum += fib2;
-			}
-			if(fib2 >= 4000000)
-				test = false;
-		}
-		System.out.println(sum);
-	}
-
+ 
+public class Main extends JavaProjectEulerLib {
+ 
+ 
+        public static void main(String[] args) {
+                long rez = 0;
+                long checkedValue = 600851475143l;
+                long divisor = 2;
+                while ((divisor * divisor) <= checkedValue) {
+                        if ((checkedValue % divisor) == 0) {
+                                rez = divisor;
+                                System.out.println("diviseur " +divisor);
+                                checkedValue /= divisor;
+                                System.out.println("reste : "+checkedValue);
+                        }
+                        else {
+                                divisor++;
+                        }
+                }
+               
+                if (checkedValue != 1) {
+                        rez = checkedValue;
+                }
+               
+                System.out.println(rez);
+        }
 }

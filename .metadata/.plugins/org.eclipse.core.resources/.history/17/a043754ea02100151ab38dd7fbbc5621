@@ -1,0 +1,26 @@
+
+ 
+public class Main extends JavaProjectEulerLib {
+ 
+ 
+        public static void main(String[] args) {
+                long rez = 0;
+                long checkedValue = 100l;
+                long divisor = 2;
+                while ((divisor * divisor) <= checkedValue) {
+                        if ((checkedValue % divisor) == 0) {
+                                rez = divisor;
+                                checkedValue /= divisor;
+                        }
+                        else {
+                                divisor++;
+                        }
+                }
+               
+                if (checkedValue != 1) {
+                        rez = checkedValue;
+                }
+               
+                System.out.println(rez);
+        }
+}

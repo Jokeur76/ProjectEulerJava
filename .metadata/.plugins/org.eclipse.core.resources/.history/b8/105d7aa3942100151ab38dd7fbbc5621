@@ -1,0 +1,21 @@
+import java.util.List;
+
+
+public class Main extends JavaProjectEulerLib {
+
+
+	public static void main(String[] args) {
+		double taille;
+		taille = 600851475143d;
+		double maxFactor = 0;
+		byte[] test = primeTab(taille);
+		for(int i = 0; i <= taille; i++){
+			if(test[i] == 1){
+				if(i > maxFactor && taille%i == 0)
+					maxFactor = i;
+			}
+		}
+		System.out.println(maxFactor);
+	}
+
+}

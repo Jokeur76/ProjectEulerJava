@@ -1,0 +1,19 @@
+
+
+public class Main extends JavaProjectEulerLib {
+
+
+	public static void main(String[] args) {
+		double taille = 600851475143d;
+		double maxFactor = 0;
+		double i = 1;
+		while(i < taille){
+			if(isPrime(i)){
+				if(i > maxFactor && taille%i == 0)
+					maxFactor = i;
+			}
+		}
+		System.out.println(maxFactor);
+	}
+
+}

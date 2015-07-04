@@ -1,0 +1,15 @@
+import java.util.List;
+
+
+public class Main extends JavaProjectEulerLib {
+
+
+	public static void main(String[] args) {
+		int taille = 100;
+		List<Byte> test = primeTab(taille);
+		for(byte i : test){
+			System.out.println(i);
+		}
+	}
+
+}

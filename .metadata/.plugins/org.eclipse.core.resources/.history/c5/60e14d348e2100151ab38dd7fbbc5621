@@ -1,0 +1,27 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+public class JavaProjectEulerLib {
+
+	public List<Byte> primeTab(int taille){
+		List<Byte> primeTableau = new ArrayList<Byte>();
+		for(int i = 0; i <= taille; i++){
+			if(i == 0)primeTableau.add(i, (byte)0);
+			if(i == 1)primeTableau.add(i, (byte)0);
+			primeTableau.add(i, (byte)1);
+		}
+		
+		for(int i = 0; i <= taille; i++){
+			if(primeTableau.get(i) == 1){
+				for(int j = i+i; i <= taille; j+=i){
+					primeTableau.set(j, (byte)0);
+				}
+			}
+		}
+		
+		return primeTableau;
+		
+	}
+
+}
